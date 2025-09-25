@@ -55,9 +55,11 @@ while running:
         character.clip_draw(frame * 100, 300, 100,100,x,y)
     else:
         if dirX == 1:
-            pass
+            character.clip_draw(frame * 100, 100, 100,100,x,y)
+            x += 10
         elif dirX == -1:
-            pass
+            character.clip_draw(frame * 100, 0, 100,100,x,y)
+            x -= 10
         if dirY == 1:
             pass
         elif dirY == -1:
@@ -66,6 +68,6 @@ while running:
     update_canvas()
     handle_event()
     frame = (frame + 1) % 8
-    delay(0.2)
+    delay(0.1)
 
 close_canvas()
