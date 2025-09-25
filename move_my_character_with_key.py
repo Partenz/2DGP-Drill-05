@@ -14,18 +14,18 @@ def handle_event():
     events = get_events()
 
     for event in events:
-        if (event.type == SDL_QUIT)
+        if event.type == SDL_QUIT:
             running = False
-        elif(event.type == SDL_KEYDOWN):
-            if(event.key == SDLK_ESCAPE):
+        elif event.type == SDL_KEYDOWN:
+            if event.key == SDLK_ESCAPE:
                 running = False
-            elif(event.key == SDLK_LEFT):
+            elif event.key == SDLK_LEFT:
                 pass
-            elif(event.key == SDLK_RIGHT):
+            elif event.key == SDLK_RIGHT:
                 pass
-            elif(event.key == SDLK_UP):
+            elif event.key == SDLK_UP:
                 pass
-            elif(event.key == SDLK_DOWN):
+            elif event.key == SDLK_DOWN:
                 pass
 
 running = True
