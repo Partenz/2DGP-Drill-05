@@ -54,20 +54,36 @@ while running:
     if dirX == 0 and dirY == 0: # IDLE 상태
         character.clip_draw(frame * 100, 300, 100,100,x,y)
     else:
-        if dirX == 1:
-            character.clip_draw(frame * 100, 100, 100,100,x,y)
-            x += 10
-        elif dirX == -1:
-            character.clip_draw(frame * 100, 0, 100,100,x,y)
-            x -= 10
-        if dirY == 1:
-            pass
-        elif dirY == -1:
-            pass
+        if dirX != 0 and dirY != 0:
+            if dirX == 1:
+                character.clip_draw(frame * 100, 100, 100, 100, x, y)
+                x += 10
+            elif dirX == -1:
+                character.clip_draw(frame * 100, 0, 100, 100, x, y)
+                x -= 10
+            if dirY == 1:
+                y += 10
+            elif dirY == -1:
+                y -= 10
+        elif dirX != 0 and dirY == 0:
+            if dirX == 1:
+                character.clip_draw(frame * 100, 100, 100, 100, x, y)
+                x += 10
+            elif dirX == -1:
+                character.clip_draw(frame * 100, 0, 100, 100, x, y)
+                x -= 10
+        elif dirX == 0 and dirY != 0:
+            if dirY == 1:
+                character.clip_draw(frame * 100, 100, 100, 100, x, y)
+                y += 10
+            elif dirY == -1:
+                character.clip_draw(frame * 100, 0, 100, 100, x, y)
+                y -= 10
+
 
     update_canvas()
     handle_event()
     frame = (frame + 1) % 8
-    delay(0.1)
+    delay(0.05)
 
 close_canvas()
