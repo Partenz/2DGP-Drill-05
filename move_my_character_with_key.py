@@ -7,7 +7,6 @@ open_canvas(width,height)
 tuk_ground = load_image('TUK_GROUND.png')
 character = load_image('animation_sheet.png')
 
-
 def handle_event():
     global running
     global dirX, dirY
