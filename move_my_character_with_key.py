@@ -10,7 +10,7 @@ character = load_image('character.png')
 
 def handle_event():
     global running
-
+    global dirX, dirY
     events = get_events()
 
     for event in events:
@@ -29,6 +29,12 @@ def handle_event():
                 pass
 
 running = True
+
+dirX = 0
+dirY = 0
+
+x = width // 2
+y = height // 2
 
 frame = 0
 
