@@ -57,28 +57,36 @@ while running:
         if dirX != 0 and dirY != 0:
             if dirX == 1:
                 character.clip_draw(frame * 100, 100, 100, 100, x, y)
-                x += 10
+                if x + 10 < width - 20:
+                    x += 10
             elif dirX == -1:
                 character.clip_draw(frame * 100, 0, 100, 100, x, y)
-                x -= 10
+                if x - 10 > 20:
+                    x -= 10
             if dirY == 1:
-                y += 10
+                if y + 10 < height - 30:
+                    y += 10
             elif dirY == -1:
-                y -= 10
+                if y - 10 > 30:
+                    y -= 10
         elif dirX != 0 and dirY == 0:
             if dirX == 1:
                 character.clip_draw(frame * 100, 100, 100, 100, x, y)
-                x += 10
+                if x + 10 < width - 20:
+                    x += 10
             elif dirX == -1:
                 character.clip_draw(frame * 100, 0, 100, 100, x, y)
-                x -= 10
+                if x - 10 > 20:
+                    x -= 10
         elif dirX == 0 and dirY != 0:
             if dirY == 1:
                 character.clip_draw(frame * 100, 100, 100, 100, x, y)
-                y += 10
+                if y + 10 < height - 30:
+                    y += 10
             elif dirY == -1:
                 character.clip_draw(frame * 100, 0, 100, 100, x, y)
-                y -= 10
+                if y - 10 > 30:
+                    y -= 10
 
 
     update_canvas()
