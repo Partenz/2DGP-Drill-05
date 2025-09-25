@@ -52,7 +52,7 @@ while running:
     tuk_ground.draw(width // 2, height // 2)
 
     if dirX == 0 and dirY == 0: # IDLE 상태
-        pass
+        character.clip_draw(frame * 100, 300, 100,100,x,y)
     else:
         if dirX == 1:
             pass
@@ -65,5 +65,7 @@ while running:
 
     update_canvas()
     handle_event()
+    frame = (frame + 1) % 8
+    delay(0.2)
 
 close_canvas()
