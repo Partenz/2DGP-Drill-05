@@ -51,6 +51,18 @@ while running:
     clear_canvas()
     tuk_ground.draw(width // 2, height // 2)
 
+    if dirX == 0 and dirY == 0: # IDLE 상태
+        pass
+    else:
+        if dirX == 1:
+            pass
+        elif dirX == -1:
+            pass
+        if dirY == 1:
+            pass
+        elif dirY == -1:
+            pass
+
     update_canvas()
     handle_event()
 
